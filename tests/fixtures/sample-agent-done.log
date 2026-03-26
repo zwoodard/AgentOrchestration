@@ -1,0 +1,5 @@
+I'll start by looking at the codebase structure.
+Reading the billing service files...
+Fixed the subscription check to properly handle expired subscriptions.
+Added tests for the edge case.
+DONE: Fixed billing 500 error for expired subscriptions. Branch: bd-a1b2/fix-billing-500. Files changed: subscription_check.py, test_subscription.py

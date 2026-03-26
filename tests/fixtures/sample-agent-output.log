@@ -1,0 +1,5 @@
+I'll start by looking at the codebase structure.
+Reading the billing service files...
+Found the issue in subscription_check.py line 42.
+The expired subscription check returns None instead of raising a proper error.
+BLOCKED: Should I consolidate the subscription check into a shared middleware, or fix it inline in the billing endpoint?
