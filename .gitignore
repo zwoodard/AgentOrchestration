@@ -1,0 +1,15 @@
+# Cloned repos (large, machine-specific)
+pool/
+
+# Active worktrees (ephemeral)
+worktrees/
+
+# Agent output logs
+logs/
+
+# Beads database
+.beads/
+
+# OS files
+.DS_Store
+Thumbs.db

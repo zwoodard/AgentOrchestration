@@ -1,0 +1,19 @@
+# Repo registry — add repos here or via the orchestrator
+# Each repo can override defaults from defaults.yaml
+repos: {}
+  # example-repo:
+  #   url: https://github.com/org/example-repo
+  #   platform: github
+  #   default_branch: main
+  #   pre_clone: true
+  #   max_worktrees: 3
+  #   permission_mode: managed
+  #   autonomy: medium
+  #   allowed_tools:
+  #     - "Read"
+  #     - "Edit"
+  #     - "Write"
+  #     - "Bash(git *)"
+  #     - "Bash(npm *)"
+  #   denied_tools:
+  #     - "Bash(git push --force *)"
