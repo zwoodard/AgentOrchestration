@@ -1,0 +1,25 @@
+repos:
+  product-a:
+    url: https://dev.azure.com/org/project/_git/product-a
+    platform: azure-devops
+    default_branch: main
+    pre_clone: true
+    max_worktrees: 3
+    permission_mode: managed
+    autonomy: medium
+    allowed_tools:
+      - "Read"
+      - "Edit"
+      - "Write"
+      - "Bash(git *)"
+      - "Bash(npm *)"
+    denied_tools:
+      - "Bash(git push --force *)"
+  product-b:
+    url: https://github.com/org/product-b
+    platform: github
+    default_branch: develop
+    pre_clone: true
+    max_worktrees: 2
+    permission_mode: yolo
+    autonomy: high

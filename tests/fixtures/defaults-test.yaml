@@ -1,0 +1,13 @@
+defaults:
+  permission_mode: managed
+  autonomy: medium
+  max_worktrees: 3
+  default_branch: main
+  pre_clone: false
+  allowed_tools:
+    - "Read"
+    - "Edit"
+    - "Write"
+    - "Bash(git *)"
+  denied_tools:
+    - "Bash(git push --force *)"
