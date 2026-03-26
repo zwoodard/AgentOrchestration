@@ -407,8 +407,7 @@ This is a useful safety property: the orchestrator can't accidentally destabiliz
 ## Prerequisites
 
 - **Claude Code CLI** (`claude`) installed and authenticated
-- **Dolt** installed (required by Beads)
-- **Beads** (`bd`) CLI installed
+- **Beads** (`bd`) CLI installed (`npm install -g @beads/bd` or `brew install beads`)
 - **Git** with worktree support (Git 2.5+)
 - **Git Bash** on Windows (typically included with Git for Windows)
 
