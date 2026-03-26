@@ -15,6 +15,10 @@
 #
 # All functions strip surrounding double-quotes from values.
 # Missing fields/repos return an empty string.
+#
+# NOTE: This file is intended to be sourced by other scripts (e.g. `source parse-yaml.sh`).
+# It intentionally does NOT use `set -euo pipefail` to avoid altering the error-handling
+# behavior of the calling script.
 
 # _yaml_strip_quotes <value>
 # Remove surrounding double-quotes from a string.
@@ -52,7 +56,7 @@ yaml_list_repos() {
         fi
     done < "$file"
 
-    printf '%s' "${repos[*]}"
+    printf '%s\n' "${repos[*]}"
 }
 
 # yaml_get_repo_field <file> <repo> <field>
@@ -108,7 +112,7 @@ yaml_get_repo_field() {
         fi
     done < "$file"
 
-    printf '%s' "$result"
+    printf '%s\n' "$result"
 }
 
 # yaml_get_repo_list <file> <repo> <field>
@@ -181,7 +185,7 @@ yaml_get_repo_list() {
         fi
     done < "$file"
 
-    printf '%s' "${items[*]}"
+    printf '%s\n' "${items[*]}"
 }
 
 # yaml_get_default <file> <field>
@@ -217,7 +221,7 @@ yaml_get_default() {
         fi
     done < "$file"
 
-    printf '%s' "$result"
+    printf '%s\n' "$result"
 }
 
 # yaml_get_default_list <file> <field>
@@ -269,5 +273,5 @@ yaml_get_default_list() {
         fi
     done < "$file"
 
-    printf '%s' "${items[*]}"
+    printf '%s\n' "${items[*]}"
 }
